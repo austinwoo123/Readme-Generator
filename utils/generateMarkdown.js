@@ -18,7 +18,7 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * * [Installation](#installation)
+  * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
   * [Test](#test)
@@ -51,7 +51,7 @@ function generateMarkdown(data) {
 
   ## Badges
 
-  
+
 `;
 }
 

@@ -5,7 +5,7 @@ const generateMarkdown = ("./utils/generateMarkdown.js");
 const fs = require("fs");
 const util = require("util");
 
-const api = require(".utils/api.js");
+const api = require("./utils/api.js");
 // var axios = require("axios");
 
 //  Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -43,6 +43,7 @@ const questions = [
 
     {
         type: "list",
+        name: "license",
         message: "What kind of license shouldd your project have?",
         choices: ['MIT License', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense'],
     },

@@ -1,9 +1,12 @@
 //  Include packages needed for this application
 // npm install 
-var inquirer = require("inquirer");
-var generateMarkdown = ("./utils/generateMarkdown.js");
-var fs = require("fs");
-var axios = require("axios");
+const inquirer = require("inquirer");
+const generateMarkdown = ("./utils/generateMarkdown.js");
+const fs = require("fs");
+const util = require("util");
+
+const api = require(".utils/api.js");
+// var axios = require("axios");
 
 //  Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 //  Create an array of questions for user input
@@ -79,15 +82,26 @@ function writeToFile(fileName, data) {
     });
 }
 
+const writeFileAsync = util.promisify(writeToFile);
 //  Create a function to initialize app
-function init() {
-    inquirer.prompt(questions).then(answers => {
-        console.log(answers);
-        axios
-            .get("https://api.github.com/users/" + answers.username)
-            .then
-    })
-}
+async function init() {
+    try {
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Your responses: ", userResponses);
+        console.log("Thank you. Your responses have been recorded. Please Wait...");
+
+        const userInfo = await api.getUser(userResponses);
+        console.log("Your Github username is: ", userInfo);
+
+        console.log("Generating your readme markdown file...")
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
+
+        await writeFileAsync('ExampleREADME.md', markdown);
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 // Function call to initialize app
 init();

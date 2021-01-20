@@ -70,10 +70,24 @@ const questions = [
 ];
 
 //  Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Your README.md file has been generated!")
+    });
+}
 
 //  Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.prompt(questions).then(answers => {
+        console.log(answers);
+        axios
+            .get("https://api.github.com/users/" + answers.username)
+            .then
+    })
+}
 
 // Function call to initialize app
 init();

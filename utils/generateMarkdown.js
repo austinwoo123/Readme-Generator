@@ -1,6 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) {
+  if (license === "MIT License") {
+    return "[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)"
+  }
+
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -44,7 +49,8 @@ function generateMarkdown(data) {
   If you have any questions, please feel free to contact me at ${data.username} on Github.
 
   ## License
-  MIT License
+  ${renderLicenseBadge(data.license)}
+  
 
   ## Author
   

@@ -1,7 +1,7 @@
 //  Include packages needed for this application
 // npm install 
 const inquirer = require("inquirer");
-const generateMarkdown = ("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 const fs = require("fs");
 const util = require("util");
 
@@ -9,7 +9,7 @@ const api = require("./utils/api.js");
 // var axios = require("axios");
 
 //  Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-//  Create an array of questions for user input
+//  array of questions for user input
 const questions = [
     {
         type: "input",
@@ -73,7 +73,7 @@ const questions = [
     }
 ];
 
-//  Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -84,18 +84,18 @@ function writeToFile(fileName, data) {
 }
 
 const writeFileAsync = util.promisify(writeToFile);
-//  Create a function to initialize app
+//  This is the function to initialize app
 async function init() {
     try {
         const userResponses = await inquirer.prompt(questions);
         console.log("Your responses: ", userResponses);
         console.log("Thank you. Your responses have been recorded. Please Wait...");
 
-        const userInfo = await api.getUser(userResponses);
-        console.log("Your Github username is: ", userInfo);
+        // const userInfo = await api.getUser(userResponses);
+        // console.log("Your Github username is: ", userInfo);
 
         console.log("Generating your readme markdown file...")
-        const markdown = generateMarkdown(userResponses, userInfo);
+        const markdown = generateMarkdown(userResponses);
         console.log(markdown);
 
         await writeFileAsync('ExampleREADME.md', markdown);

@@ -61,10 +61,10 @@ const api = {
 This code shows how I am calling the axios dependency to call out and retrieve information from the api github users data. 
 
 ## Built with
-    * Node
-    * Inquirer
-    * axios
-    * git bash
+* Node
+* Inquirer
+* axios
+* git bash
 ## Licenses
    MIT License
 

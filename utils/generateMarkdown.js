@@ -40,7 +40,7 @@ function generateMarkdown(data) {
   ${data.contributing}
 
   ## Test
-  ${data.test}
+  ${data.tests}
 
   ## Questions
   If you have any questions, please feel free to contact me at ${data.username} on Github.

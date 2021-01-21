@@ -1,6 +1,6 @@
 # Readme-Generator
 
-## Project Description:
+## Project Description
 
 ## Table of Contents
 * [Installation](#installation)
@@ -23,7 +23,7 @@
    ## Questions
 
    ## License
-    * MIT 
+  
 
    ## Author
 

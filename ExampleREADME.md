@@ -1,7 +1,7 @@
-# Project Title : asdf
+# Project Title : Readme-Generator
 
   ## Project Description:
-  asdf
+  This is an app that helps users generate a Readme markdown file
 
   ## Table of Contents
   * [Installation](#installation)
@@ -14,28 +14,28 @@
   * [Badges](#badges)
   
   ## Badges
-  [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+  [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
   
   ## Installation
-  dsdfa
+  download requirements
 
   ## Usage
-  sadf
+  clone from github and run index.js file
 
   ## Contributors
-  asdfasd
+  All contributions should be reviewed
 
   ## Test
   undefined
 
   ## Questions
-  If you have any questions, please feel free to contact me at sdaf on Github.
+  If you have any questions, please feel free to contact me at austinwoo123 on Github.
 
   ## License
-  Open Source
+  MIT License
   
 
   ## Author
-  asdf
+  Austin
 
 

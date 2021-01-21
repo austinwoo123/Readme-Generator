@@ -31,13 +31,13 @@ const questions = [
 
     {
         type: "input",
-        message: "What is the name of your Github repo?",
-        name: "repo",
+        message: "Who are the authors?",
+        name: "authors",
     },
 
     {
         type: "input",
-        message: "Please write a short description of your project.",
+        message: "Please write a description of your project.",
         name: "description"
     },
 
@@ -45,7 +45,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "What kind of license shouldd your project have?",
-        choices: ['MIT License', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['MIT License', 'Open Source'],
     },
 
     {

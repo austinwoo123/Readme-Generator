@@ -17,8 +17,9 @@ This project was about creating an app that can quickly and easily create a READ
   ![Alt Text](https://austinwoo123.github.io/Readme-Generator/assets/tutorial.gif)
 
   ## How to Start
-Open the index.js file and type the command node index.js in the terminal.
+Open the index.js file and type the command: "node index.js" in the terminal.
   ## Code Snippet
+
 ```
 async function init() {
     try {
@@ -59,18 +60,18 @@ const api = {
 
 This code shows how I am calling the axios dependency to call out and retrieve information from the api github users data. 
 
-   ## Built with
+## Built with
     * Node
     * Inquirer
     * axios
     * git bash
-   ## Licenses
+## Licenses
    MIT License
 
-   ## Author
+## Author
    Austin Woo
   
-   ## Acknowledgements
+## Acknowledgements
 - Jerome Chenette (Instructor)
 - Manuel Nunes (TA)
 - Mahisha Manikandan (TA)
